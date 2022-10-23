@@ -1,0 +1,54 @@
+<div class="dashboard-charts">
+    <div class="grid-wrappper">
+    <div class="chart-grid">
+        <div class="chart-grid1">
+            <ngx-charts-number-card [scheme]="scheme" [results]="single2" [cardColor]="cardColor"
+                [textColor]="textColor" (select)="onSelect($event)">
+            </ngx-charts-number-card>
+        </div>
+        <div class="chart-grid2">
+            <div class="container-chart">
+                <span class="chart-title">Line Chart</span>
+                <ngx-charts-line-chart [scheme]="scheme" [legend]="legend" [gradient]="gradient" [results]="data"
+                    [xAxis]="showXAxis" [yAxis]="showYAxis" [showYAxisLabel]="showYAxisLabel" [autoScale]="autoScale"
+                    [yAxisLabel]="yAxisLabel" [timeline]="true" (select)="onSelect($event)">
+                </ngx-charts-line-chart>
+            </div>
+        </div>
+        <div class="chart-grid3">
+            <div class="container-chart">
+                <span class="chart-title">Doughnut Chart</span>
+                <ngx-charts-pie-chart [scheme]="scheme" [results]="single" [labels]="showLabels"
+                    [doughnut]="isdoughnut">
+                </ngx-charts-pie-chart>
+                <!-- <button mat-raised-button class="button-design" type="button" (click)="toggle()">Toggle</button> -->
+            </div>
+        </div>
+    <div class="chart-grid41">
+        <div class="container-chart">   
+            <span class="chart-title">Polar Area  Chart</span>
+            <ngx-charts-polar-chart [scheme]="scheme" [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel" [xAxis]="showXAxis" [yAxis]="showYAxis" [xAxisLabel]="xPolarLabel"
+                [yAxisLabel]="yPolarLabel" [results]="data" [curve]="curve" (select)="onSelect($event)">
+            </ngx-charts-polar-chart>
+            <!-- <button mat-raised-button type="button" class="polar-btn" (click)="toggleP()">Toggle Interpolation</button> -->
+        </div>
+    </div>
+    <div class="chart-grid42">
+        <div class="container-chart">
+            <span class="chart-title">Pie Chart</span>
+            <ngx-charts-pie-chart [scheme]="scheme" [results]="single"  [labels]="showLabels"
+                [gradient]="gradient" [explodeSlices]="true">
+            </ngx-charts-pie-chart>
+        </div>
+    </div>
+    <div class="chart-grid43">
+        <div class="container-chart">
+            <span class="chart-title">Pie Chart</span>
+            <ngx-charts-pie-chart [scheme]="scheme" [results]="single"  [labels]="showLabels"
+                [gradient]="gradient" [explodeSlices]="true" [doughnut]="isdough">
+            </ngx-charts-pie-chart>
+        </div>
+    </div>
+  </div>
+</div>

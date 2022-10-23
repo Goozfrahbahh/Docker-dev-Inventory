@@ -1,0 +1,9 @@
+<input type="file" class="file-input" accept=".csv" placeholder="Choose a file" (change)="fileChangeListener($event)"
+       #fileUpload />
+<span class="addTitle">Upload Daily Total</span>
+<button mat-raised-button class="upload-btn" (click)="fileUpload.click()">
+       Choose File
+</button>
+<button mat-raised-button #submitbtn id="submit-btn" type="button" (click)="extractionMethod()">
+       Submit
+</button>

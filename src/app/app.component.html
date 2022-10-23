@@ -1,0 +1,68 @@
+<div class="toggleclick" clickOutside (clickOutside)="clickedOutside()" flex flex-none static>
+       <div id="stationarysidebar" (mouseover)="onMouseEnter()" >
+              <a routerLink="/dashboard">
+                     <mat-icon [routerLinkActive]="'active'" id="iconsbar2" class="icon">
+                            view_quilt
+                     </mat-icon>
+              </a>
+              <a routerLink="/input-form">
+                     <mat-icon [routerLinkActive]="'active'" id="iconsbar5" class="icon">
+                            design_services
+                     </mat-icon>
+              </a>
+              <a routerLink="/inventoryextractor">
+                     <mat-icon [routerLinkActive]="'active'" id="iconsbar3" class="icon">
+                            file_open
+                     </mat-icon>
+              </a>
+              <a routerLink="calendar">
+                     <mat-icon [routerLinkActive]="'active'" id="iconsbar5" class="icon">
+                            edit_calendar
+                     </mat-icon>
+              </a>
+              <a routerLink="/icategories">
+                     <mat-icon [routerLinkActive]="'active'" id="iconsbar2" class="icon">
+                            inventory_2
+                     </mat-icon>
+              </a>
+              <a routerLink="/settings" id="settingsModal">
+                     <mat-icon [routerLinkActive]="'active'" id="iconsbar4" class="icon">
+                            settings
+                     </mat-icon>
+              </a>
+       </div>
+       <div id="navigation-wrapper">
+              <div id="nav-container" [ngClass]="statusLink ? 'widthlg2' : 'widthsm2'" (mouseleave)="onMouseOut()">
+                     <nav id="sidebar" [ngClass]="statusLink ? 'ophundred' : 'opzero'" (mouseove)="onMouseEnter()">
+                            <a [routerLinkActive]="'active'" routerLink="/dashboard" class="inventorysideNav">
+                                   Dashboard
+                            </a>
+                            <a [routerLinkActive]="'active'" routerLink="/input-form" class="inventorysideNav">
+                                   Inventory Input
+                            </a>
+                            <a [routerLinkActive]="'active'" routerLink="/inventoryextractor" class="inventorysideNav">
+                                   File-Upload
+                            </a>
+                            <a [routerLinkActive]="'active'" routerLink="/calendar" class="inventorysideNav">
+                                   Calendar
+                            </a>
+                            <a [routerLinkActive]="'active'" routerLink="/icategories" class="inventorysideNav">
+                                   Categories
+                            </a>
+                     </nav>
+              </div>
+       </div>
+</div>
+
+<div id="title-container">
+       <h1 class="titlebarText">Casa Colombia Downtown</h1>
+       <a [routerLinkActive]="'active'" routerLink="/login" class="inventorysideNav" class="log-inTop">
+              <mat-icon class="login-icon">lock</mat-icon>
+       </a>
+</div>
+<div id="projectWrapper" [ngClass]="statusLink ? 'margLeft' : 'margleft'">
+       <div id="displaybody">
+              <router-outlet (mouseover)="(onMouseEnter2)"></router-outlet>
+              <app-messages></app-messages>
+       </div>
+</div>
